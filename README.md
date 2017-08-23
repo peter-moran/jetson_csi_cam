@@ -106,13 +106,13 @@ In other words, to set any of the arguments (which you'll have to open the launc
 * `frame_id` -- The TF frame ID for the camera.
 * `sync_sink` -- Whether to synchronize the app sink. Setting this to false may resolve problems with sub-par framerates.
 
-### Testing your video stream
+## Testing your video stream
 
-#### View the video
+### View the video
 
 To view the video, simply run `rqt_image_view` in a new terminal. A window will pop up and the video should be inside. You may need to go to the pulldown in the top left to choose your camera's video topic, by default you want to use  `/csi_cam/image_raw`.
 
-#### Calculate true framerate
+### Calculate true framerate
 
 To check the true framerate of your video you can use the `rostopic hz` tool, which shows the frequency any topic is published at.
 

@@ -64,6 +64,8 @@ source ~/.bashrc
 
 At this point everything should be ready to go.
 
+---
+
 # Usage
 
 > **TL;DR:** To publish the camera stream to the ROS topic `/csi_cam/image_raw`, use this command in the terminal:

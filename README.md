@@ -97,7 +97,7 @@ Most of the time we'll want to use settings other than the defaults. We can easi
 roslaunch jetson_csi_cam jetson_csi_cam.launch width:=3840 height:=2160 fps:=15
 ```
 
-In other words, to set any of the arguments (which you'll have to open the launch file to find), then use the `<arg_name>:=<arg_value>` options for `roslaunch`.
+In other words, to set any of the arguments use the `<arg_name>:=<arg_value>` options for `roslaunch`.
 
 #### Accepted arguments for `jetson_csi_cam.launch`
 

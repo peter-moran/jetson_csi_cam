@@ -37,7 +37,7 @@ With these dependencies accounted for, lets get everything installed.
 Clone this repository into you `catkin_workspace`.
 
 ```
-cd ~/catkin_ws/src
+cd ~/catkin_workspace/src
 git clone https://github.com/peter-moran/jetson_csi_cam.git 
 ```
 
@@ -61,7 +61,7 @@ While this flag is only necessary if you have both `gstreamer-0.1` and `gstreame
 Now we build and register `gscam` and `jetson_csi_cam` in ROS.
 
 ```
-cd ~/catkin_ws
+cd ~/catkin_workspace
 catkin_make
 source ~/.bashrc
 ```

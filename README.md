@@ -73,12 +73,12 @@ At this point everything should be ready to go.
 
 # Usage
 
-> **TL;DR:** To publish the camera stream to the ROS topic `/csi_cam_id0/image_raw`, use this command in the terminal:
+> **TL;DR:** To publish the camera stream to the ROS topic `/csi_cam_0/image_raw`, use this command in the terminal:
 >
 > ```
 > roslaunch jetson_csi_cam jetson_csi_cam.launch width:=<image width> height:=<image height> fps:=<desired framerate>
 > ```
-> If you have another camera on your Jetson TX2, to publish the other camera stream to the ROS topic `/csi_cam_id1/image_raw`, use this command in the terminal:
+> If you have another camera on your Jetson TX2, to publish the other camera stream to the ROS topic `/csi_cam_1/image_raw`, use this command in the terminal:
 >
 > ```
 > roslaunch jetson_csi_cam jetson_csi_cam.launch sensor_id:=1 width:=<image width> height:=<image height> fps:=<desired framerate>

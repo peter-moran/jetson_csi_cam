@@ -9,6 +9,7 @@ This ROS package makes it simple to use CSI cameras on the Nvidia Jetson TK1, TX
 * Control resolution and framerate.
 * Camera calibration support.
 * Works efficiently, allowing for high resolution and/or high fps video by taking advantage of gstreamer and the Nvidia multimedia API.
+* Multi camera support.
 
 ---
 
@@ -72,10 +73,15 @@ At this point everything should be ready to go.
 
 # Usage
 
-> **TL;DR:** To publish the camera stream to the ROS topic `/csi_cam/image_raw`, use this command in the terminal:
+> **TL;DR:** To publish the camera stream to the ROS topic `/csi_cam_0/image_raw`, use this command in the terminal:
 >
 > ```
 > roslaunch jetson_csi_cam jetson_csi_cam.launch width:=<image width> height:=<image height> fps:=<desired framerate>
+> ```
+> If you have another camera on your Jetson TX2, to publish the other camera stream to the ROS topic `/csi_cam_1/image_raw`, use this command in the terminal:
+>
+> ```
+> roslaunch jetson_csi_cam jetson_csi_cam.launch sensor_id:=1 width:=<image width> height:=<image height> fps:=<desired framerate>
 > ```
 > If you would like to learn more of the details, read ahead.
 
@@ -105,6 +111,7 @@ In other words, to set any of the arguments use the `<arg_name>:=<arg_value>` op
 
 #### Accepted arguments for `jetson_csi_cam.launch`
 
+* `sensor_id` -- The sensor id of each camera
 * `width` -- Image Width
 * `height` -- Image Height
 * `fps` -- Desired framerate. True framerate may not reach this if set too high.

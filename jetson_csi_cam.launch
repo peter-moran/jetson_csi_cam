@@ -1,7 +1,7 @@
 <launch>
   <!-- Command Line Arguments -->
-  <arg name="sensor_id" default="0" />                  <!-- The sensor id of the camera -->
-  <arg name="cam_name" default="csi_cam_id$(arg sensor_id)" />                  <!-- The name of the camera (corrsponding to the camera info) -->
+  <arg name="sensor_id" default="0" />                       <!-- The sensor id of the camera -->
+  <arg name="cam_name" default="csi_cam_$(arg sensor_id)" /> <!-- The name of the camera (corrsponding to the camera info) -->
   <arg name="frame_id" default="/$(arg cam_name)_link" />    <!-- The TF frame ID. -->
   <arg name="sync_sink" default="true" />                    <!-- Synchronize the app sink. Setting this to false may resolve problems with sub-par framerates. -->
   <arg name="width" default="1920" />                        <!-- Image Width -->
